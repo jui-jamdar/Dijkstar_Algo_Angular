@@ -11,7 +11,7 @@ export class DijkstraService {
       this.vertices = {};
   }
 
-  addVertex(vertex: Vertex): void {// adding vertexes after that 
+  addVertex(vertex: Vertex): void {
       console.log('vertex obj' + vertex);
       this.vertices[vertex.name] = vertex;
   }
@@ -61,9 +61,6 @@ export class DijkstraService {
           for (let j of currentVertex.nodes) {
               j.weight = Number(j.weight);
               const calculateWeight = currentVertex.weight + j.weight;
-            //   console.log(typeof currentVertex.weight)
-            //   console.log(typeof j.weight)
-            //   console.log("j.nameOfVertex" +j.nameOfVertex);
               if (calculateWeight < this.vertices[j.nameOfVertex].weight) {
                   this.vertices[j.nameOfVertex].weight = calculateWeight;
               }
