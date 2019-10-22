@@ -363,7 +363,7 @@ fdescribe('AppComponent', () => {
 
   it('fnidshortestpath Testing' , () => {
 	  component.destination = 'C';
-	  component.findShortestPath('A');
+	  component.findShortestPath('A','B');
   })
 
 
