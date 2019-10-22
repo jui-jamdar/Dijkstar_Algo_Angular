@@ -29,10 +29,6 @@ fdescribe('DijkstraService', () => {
 
   it('findShortestWay to be called', () => {
     const service: DijkstraService = TestBed.get(DijkstraService);// no subscription as its not returning any observble
-    //const node=[{'destination':'B'},{weight:3}]
-    // const node= new NodeVertex();
-    // const nodeArray=[];
-	// nodeArray.push(node); 
 	service.addVertex({
 		"name": "A",
 		"nodes": [ 
@@ -279,10 +275,6 @@ service.addVertex({
 
   it('findPointsOfShortestWay to be called', () => {
     const service: DijkstraService = TestBed.get(DijkstraService);// no subscription as its not returning any observble
-    //const node=[{'destination':'B'},{weight:3}]
-    // const node= new NodeVertex();
-    // const nodeArray=[];
-	// nodeArray.push(node);  
 	service.addVertex({
 		"name": "A",
 		"nodes": [ 
