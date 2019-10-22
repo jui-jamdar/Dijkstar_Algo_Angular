@@ -55,8 +55,6 @@ export class DijkstraService {
 
       while (Object.keys(nodes).length !== 0) {
           const sortedVisitedByWeight: string[] = Object.keys(nodes).sort((a, b) => this.vertices[a].weight.toFixed(2) - this.vertices[b].weight.toFixed(2));
-         // const sortedVisitedByWeight: Vertex[]  = Object.keys(nodes).sort((a, b) => this.vertices[a].weight.toFixed(2) - this.vertices[b].weight.toFixed(2));
-
           const currentVertex: Vertex = this.vertices[sortedVisitedByWeight[0]];
           for (let j of currentVertex.nodes) {
               j.weight = Number(j.weight);
