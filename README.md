@@ -53,7 +53,7 @@ Steps for creating project
 
 Once the source code is present on Github we can clone in our local machine and then follow the below steps:
 1. git clone 
-2. npm install -g @angular/cli
+2. npm install
 3. ng serve
 4. json-server sample.json
 5. Run the application in browser by the default http://localhost:4200
