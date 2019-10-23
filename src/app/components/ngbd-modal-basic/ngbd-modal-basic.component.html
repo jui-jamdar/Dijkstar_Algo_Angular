@@ -1,0 +1,23 @@
+<ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Shortest path</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              For getting to your destination u need  to go from 
+              <p *ngFor="let item of result;let i = index"  style="display: inline;">{{item}}
+                  <i class="fa fa-arrow-right"  ></i>
+              </p>
+              <p style="display: inline;">{{lastelement}}</p>
+            <p>total time need to travel is {{time}}.</p>
+            <p>total light year  travelling {{ time * calculation.lightYearConst }} in meters.</p>
+            <p>time required is {{ (time * calculation.lightYearConst) / calculation.passengertravelSpeed}} in Seconds</p>
+            </div>
+          </form>
+        </div>
+       
+      </ng-template>  

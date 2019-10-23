@@ -16,11 +16,14 @@
         <h3 class="text-center" > Destination</h3>  
         <div class="dropdown text-center">
 
-              <select class="btn btn-primary" (change)="onChange($event.target.value)">
+              <select   class="btn btn-primary" (change)="onChange($event.target.value)">
                 <option  class="dropdown-item" type="button" >Select</option>
-                <option *ngFor='let i of vertexArray' class="dropdown-item" type="button" >{{i.name}}</option>
+                <option *ngFor='let i of vertexArray' class="dropdown-item" type="button" style="background: #5e5cb8; color: #fff;" >{{i.name}}</option>
               </select>
-            
+              <!-- <div class="select" tabindex="1" >
+                <input *ngFor='let i of vertexArray' (change)="onChange($event.target.value)" value="{{i.name}}" class="options-select" name="selectors" type="radio" id="opt1" checked>
+                <label  *ngFor='let i of vertexArray' for="opt1" class="option">{{ i.name}}</label>                       
+              </div> -->
           </div>
       </div>
       <br>

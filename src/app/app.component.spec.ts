@@ -3,15 +3,15 @@ import { AppComponent } from './app.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Component, ViewChild } from '@angular/core';
-import { DijkstraService } from './service/dijkstra.service';
-import { Vertex, NodeVertex } from './classes/algoclasses';
-import { GraphService } from './service/graph.service';
+import { DijkstraService } from './services/dijkstra.service';
+import { Vertex, NodeVertex } from './models/algoclasses';
+import { GraphService } from './services/graph.service';
 import { Observable, of } from 'rxjs';
-import { NgbdModalBasicComponent } from './ngbd-modal-basic/ngbd-modal-basic.component';
-import { ToastService } from './service/toast.service';
+import { NgbdModalBasicComponent } from './components/ngbd-modal-basic/ngbd-modal-basic.component';
+import { ToastService } from './services/toast.service';
 import { AppModule } from './app.module';
-import { SpinnerComponent } from './spinner/spinner.component';
-import { ToastsContainerComponent } from './ngbd-toast-global/toasts-container/toasts-container.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ToastsContainerComponent } from './components/ngbd-toast-global/toasts-container/toasts-container.component';
 import { NgbToast } from '@ng-bootstrap/ng-bootstrap';
 
 class DijkstraServiceStub {

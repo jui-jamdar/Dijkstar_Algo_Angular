@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { DijkstraService } from './service/dijkstra.service';
-import { Vertex, NodeVertex } from './classes/algoclasses';
-import { GraphService } from './service/graph.service';
-import { NgbdModalBasicComponent } from './ngbd-modal-basic/ngbd-modal-basic.component';
-import { ToastService } from './service/toast.service';
-import { NgbdToastGlobalComponent } from './ngbd-toast-global/ngbd-toast-global.component';
+import { DijkstraService } from './services/dijkstra.service';
+import { Vertex, NodeVertex } from './models/algoclasses';
+import { GraphService } from './services/graph.service';
+import { NgbdModalBasicComponent } from './components/ngbd-modal-basic/ngbd-modal-basic.component';
+import { ToastService } from './services/toast.service';
+import { NgbdToastGlobalComponent } from './components/ngbd-toast-global/ngbd-toast-global.component';
 
 @Component({
   selector: 'app-root',
