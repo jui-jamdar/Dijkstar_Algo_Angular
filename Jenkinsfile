@@ -9,10 +9,12 @@ Contacts:
 //
 // The main pipeline section
 //
-
- node{
-     stage('Checkout SCM'){
-         git branch: 'master', url {'https://github.com/jui-jamdar/Dijkstar_Algo_Angular.git'}
+pipeline{
+ stages{
+     stage('GIT PULL'){
+        steps{
+            git branch: 'master', url {'https://github.com/jui-jamdar/Dijkstar_Algo_Angular.git'}
+        } 
      }
      stage('Install node modules'){
          sh "npm install"
@@ -20,6 +22,5 @@ Contacts:
      stage('Build'){
          sh 'npm run build'
      }
-     stage('Deploy'){
-     }
  }
+} 
