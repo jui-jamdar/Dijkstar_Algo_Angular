@@ -12,8 +12,8 @@ Contacts:
 
  node{
      stage('Checkout SCM'){
-         git branch: 'master' url:'https://github.com/jui-jamdar/Dijkstar_Algo_Angular.git'
-     }
+         git branch: 'master', url: 'https://github.com/jui-jamdar/Dijkstar_Algo_Angular.git'
+        }
      stage('Install node modules'){
          sh "npm install"
      }
