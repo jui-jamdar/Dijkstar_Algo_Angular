@@ -9,17 +9,27 @@ Contacts:
 //
 // The main pipeline section
 //
+ pipeline {
+    agent { label 'master' } 
+	
+    stages {
+        stage('NPM INSTALL') {
+			steps {
+				sh "npm config set strict-ssl false"
+				sh "npm install --registry https://github.com/jui-jamdar/Dijkstar_Algo_Angular.git"
+			}
+		}
 
- node{
-     stage('GIT PULL'){
-         git branch: 'master', url {'https://github.com/jui-jamdar/Dijkstar_Algo_Angular.git'}
-     }
-     stage('Install node modules'){
-         sh "npm install"
-     }
-     stage('Build'){
-         sh 'npm run build'
-     }
-     stage('Deploy'){
-     }
- }
+        stage('NPM RUN BUILD') {
+			steps {
+			   sh "npm run build"
+			}
+		}
+		
+        stage('NPM TEST'){
+			steps {
+			   sh "npm run test"
+			}    
+        }
+    }
+}
